@@ -1,7 +1,7 @@
 function create_updated_collection(collection_a, object_b) {
   //在这里写入代码
 	var collection_c=count_same_elements(collection_a);
-	return updated_collection(collection_c, object_b);
+	return coll(collection_c, object_b);
 }
 function count_same_elements(collection)
  {
@@ -26,7 +26,7 @@ function count_same_elements(collection)
 	}
 	return object;
 }
-function updated_collection(collection_c, objectb) 
+function coll(collection_c, objectb) 
 {
 	for(var i=0;i<collection_c.length;i++)
 	{

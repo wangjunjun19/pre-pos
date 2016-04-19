@@ -1,25 +1,24 @@
 function count_same_elements(collection) {
+  //在这里写入代码
 	var object_b=[];
 	var length=1;
 	object_b.push({key:collection[0],count:1});
 	for(var i=1;i<collection.length;i++)
 	{	
-		if(collection[i].length===1)
+		if(collection.length===1){
+		for(var j=0;j<length;j++)
 		{
-			for(var j=0;j<length;j++)
+			if( object_b[j].key===collection[i])
 			{
-				if( object_b[j].key===collection[i])
-				{
-					object_b[j].count++;
-					break;
-				}
-			}
-			if(j===length)
-			{
-				length++;
-				object_b.push({key:collection[i],count:1});
+				object_b[j].count++;
+				break;
 			}
 		}
+		if(j===length)
+		{
+			length++;
+			object_b.push({key:collection[i],count:1});
+		}}
 		else
 		{
 			var temp=collection[i].split("-");
